@@ -1,0 +1,183 @@
+// Copyright (c) 2014 - present Adobe Systems Incorporated. All rights reserved.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the "Software"),
+// to deal in the Software without restriction, including without limitation
+// the rights to use, copy, modify, merge, publish, distribute, sublicense,
+// and/or sell copies of the Software, and to permit persons to whom the
+// Software is furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+
+// Style definitions are from
+// https://github.com/chriskempson/tomorrow-theme/tree/master/Brackets
+
+
+/* Define some variables used in multiple places */
+@background: #000;
+@foreground: #FFF;
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: #AAA;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.9);
+        color: #aaa;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #555;    
+    }
+}
+
+.cm-qualifier, .cm-hr {color: #FFF;}
+.cm-builtin {color: #FFF;}
+.cm-attribute {color: #FFF;}
+.cm-plus {color: #FFF;}
+.cm-property {color: #4E8CFF;}
+.cm-variable {color: #FFF;}
+.cm-def {color: #FFF;}
+.cm-meta {color: #4E8CFF;}
+.cm-bracket {color: #FFF;}
+.cm-string {color: #CE4444;}
+.cm-string-2 {color: @foreground;}
+.cm-comment {color: #777;}
+.cm-variable-3 {color: #FF6;}
+.cm-error {color: #FFF;}
+.cm-minus {color: #FF0;}
+.cm-keyword {color: #620193;}
+.cm-header {color: #FFF;}
+.cm-link {color: #F4F; text-decoration: none;}
+.cm-operator {color: #3033F7;}
+.cm-rangeinfo {color: #333;}
+.cm-atom {color: #EDFFA1;}
+.cm-number {color: #3033F7;}
+.cm-variable-2 {color: #4E8CFF;}
+.cm-tag {color: #4E8CFF;}
+.cm-quote {color: #FF0;}
+
+/* Extra CSS */
+
+.CodeMirror-searching {
+    background-color: #FFF;
+    &.searching-current-match {
+        background-color: #FF0;
+    }
+}
+
+
+.CodeMirror-cursor {
+    border-left: 1px solid #FF0 !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: 1px solid #111;
+}
+
+.CodeMirror-linenumber {
+    color: #555;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: rgba(255,255,100,0.8);
+		color: #000 !important;
+		font-weight: bold;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: rgba(255,255,100,0.8);
+		color: #000 !important;
+		font-weight: bold;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    background-color: #CC0;
+		color: #000 !important;
+		font-weight: bold;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 2px solid #FF0;
+}
+
+.CodeMirror {
+    .CodeMirror {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-gutters {
+        background: transparent;
+        border-right: none;
+    }
+
+    .CodeMirror .CodeMirror-activeline-background {
+        background: transparent;
+    }
+
+    .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+        background: transparent;
+        color: #767676;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline-background {
+        background: #2f2f2f;
+    }
+
+    .CodeMirror-focused .CodeMirror-activeline {
+        .CodeMirror-gutter-elt {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+    }
+}
+
+.CodeMirror-foldgutter-open:after {
+    color: #555;
+}
+.CodeMirror-foldgutter-folded:after {
+    color: #FFF;
+}
+
+.CodeMirror.over-gutter, .CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+        color: #555;
+    }
+}
+
+.CodeMirror-foldmarker {
+    border-color: #000;
+    color: #ccc;
+    background-color: #444;
+}
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}

@@ -1,0 +1,15 @@
+{
+    "name": "knox97.knox97-dark-theme",
+    "title": "KnoX DARK THEME",
+    "description": "Increase your productivity with a theme designed for focus",
+    "homepage": "https://github.com/knox97/knox-dark-theme",
+    "version": "1.0.0",
+    "author": "knox97",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.less",
+        "dark": true,
+        "addModeClass": true
+    },
+    "keywords": ["theme"]
+}
